@@ -1,9 +1,8 @@
-# Data-Warehouse-Weather-ETL-HW5
-
 # Weather Data ETL Pipeline  
 Apache Airflow + Snowflake + Open-Meteo API  
 
 ---
+
 
 ## Project Overview
 
@@ -16,7 +15,10 @@ The pipeline:
 
 The DAG runs daily and ensures data consistency using SQL transactions.
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/bceb7676-7173-49c5-abb9-9602336a1f41" />
+
 ---
+
 
 ## DAG Configuration
 
@@ -31,11 +33,16 @@ Cron Meaning:
 - Hour: 2
 - Runs every day
 
+<img width="1710" height="438" alt="image" src="https://github.com/user-attachments/assets/d1315275-d294-41a5-a190-a0aaf2bf777e" />
+
 ---
+
 
 ## TaskFlow Implementation
 
 This DAG uses the Airflow TaskFlow API with the `@task` decorator.
+
+<img width="1710" height="893" alt="image" src="https://github.com/user-attachments/assets/7cbb7466-4487-428e-932e-01465a50ff0d" />
 
 ### Implemented Tasks
 
@@ -57,19 +64,32 @@ This DAG uses the Airflow TaskFlow API with the `@task` decorator.
 
 ### Task Dependency
 
-
 Task dependency is defined through function chaining inside the DAG context.
 
 ---
+
 
 ## Airflow Variables
 
 Airflow Variables are configured for:
 
-- `LATITUDE`
-- `LONGITUDE`
+- LATITUDE
+- LONGITUDE
 
 Used in python code via:
 
 LATITUDE = Variable.get("LATITUDE")
 LONGITUDE = Variable.get("LONGITUDE")
+
+<img width="1710" height="497" alt="image" src="https://github.com/user-attachments/assets/6691b3f7-b66f-425d-bcef-4ce0b1ec233f" />
+
+---
+
+
+## Snowflake Data Validation
+
+<img width="1710" height="954" alt="image" src="https://github.com/user-attachments/assets/0412a4fd-ccbb-43fd-a76e-4885fc0da052" />
+
+
+
+
